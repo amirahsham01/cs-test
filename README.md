@@ -1,2 +1,2 @@
 # cs-test
-## run 'npm install' after cloning
+run 'npm install' after cloning
