@@ -1,6 +1,5 @@
 $theme-colors: (
-	"primary": rgb(67, 67, 255),
-  "danger": #b80c03
+	"danger": #b80c03,
 );
 
 $border-radius: 10rem;
@@ -19,3 +18,47 @@ $border-radius: 10rem;
 @import 'node_modules/bootstrap-scss/type';
 @import 'node_modules/bootstrap-scss/buttons';
 @import 'node_modules/bootstrap-scss/button-group';
+
+@mixin sidebar--custom($base_class) {
+	width: 25%;
+	min-height: 150vh;
+	float: left;
+	background: gray("200");
+
+	@at-root {
+			#{$base_class}__links {
+				font-family: Arial, Helvetica, sans-serif;
+				color: theme-color("warning");
+			}
+	}
+}
+
+@mixin content--custom($base_class) {
+	width: 75%;
+	min-height: 150vh;
+	float: right;
+	background: color("teal");
+
+	@at-root {
+		#{$base_class}__section {
+			border: 1px solid gray("800");
+			font-size: 12px;
+			padding: 25px;
+			background: gray("300");
+		}
+}
+}
+
+html, body {
+	height: 100%;
+	margin: 0;
+	padding: 0;
+}
+
+.content {
+	@include content--custom(&);
+}
+
+.sidebar {
+	@include sidebar--custom(&);
+}
