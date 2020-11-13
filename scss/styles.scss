@@ -23,12 +23,17 @@ $border-radius: 10rem;
 	width: 25%;
 	min-height: 150vh;
 	float: left;
-	background: gray("200");
+	padding: 25px;
+	text-align: center;
 
 	@at-root {
 			#{$base_class}__links {
-				font-family: Arial, Helvetica, sans-serif;
-				color: theme-color("warning");
+				color: gray("800");
+				list-style-type: none;
+				margin: 0;
+				padding: 0;
+				font-size: 20px;
+				line-height: 200%;
 			}
 	}
 }
@@ -37,14 +42,15 @@ $border-radius: 10rem;
 	width: 75%;
 	min-height: 150vh;
 	float: right;
-	background: color("teal");
+	border-left: 1px solid gray("700");
+	background: color("white");
 
 	@at-root {
 		#{$base_class}__section {
-			border: 1px solid gray("800");
-			font-size: 12px;
-			padding: 25px;
-			background: gray("300");
+			padding: 80px;
+			text-align: justify;
+			text-justify: inter-character;
+			font-size: 13px;
 		}
 }
 }
@@ -53,6 +59,8 @@ html, body {
 	height: 100%;
 	margin: 0;
 	padding: 0;
+	font-family: Arial, Helvetica, sans-serif;
+	background: gray("100");
 }
 
 .content {

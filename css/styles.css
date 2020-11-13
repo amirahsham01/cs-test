@@ -4725,24 +4725,32 @@ input[type="button"].btn-block {
 html, body {
   height: 100%;
   margin: 0;
-  padding: 0; }
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background: #f8f9fa; }
 
 .content {
   width: 75%;
   min-height: 150vh;
   float: right;
-  background: #20c997; }
+  border-left: 1px solid #495057;
+  background: #fff; }
   .content__section {
-    border: 1px solid #343a40;
-    font-size: 12px;
-    padding: 25px;
-    background: #dee2e6; }
+    padding: 80px;
+    text-align: justify;
+    text-justify: inter-character;
+    font-size: 13px; }
 
 .sidebar {
   width: 25%;
   min-height: 150vh;
   float: left;
-  background: #e9ecef; }
+  padding: 25px;
+  text-align: center; }
   .sidebar__links {
-    font-family: Arial, Helvetica, sans-serif;
-    color: #ffc107; }
+    color: #343a40;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    font-size: 20px;
+    line-height: 200%; }
