@@ -21,14 +21,14 @@
 	text-align: center;
 
 	@at-root {
-			#{$base_class}__links {
-				color: gray("800");
-				list-style-type: none;
-				margin: 0;
-				padding: 0;
-				font-size: 20px;
-				line-height: 200%;
-			}
+		#{$base_class}__links {
+			color: gray("800");
+			list-style-type: none;
+			margin: 0;
+			padding: 0;
+			font-size: 20px;
+			line-height: 200%;
+		}
 	}
 }
 
@@ -45,7 +45,7 @@
 			text-justify: inter-character;
 			font-size: 13px;
 		}
-}
+	}
 }
 
 html, body {
@@ -62,6 +62,10 @@ html, body {
 
 .sidebar {
 	@include sidebar--custom(&);
+}
+
+.show {
+	display: block;
 }
 
 @include media-breakpoint-down(md) {

@@ -1,24 +1,18 @@
-// const mql = window.matchMedia('(min-width: 768px)');
+// Toggle between hiding and showing second menu
+function toggler() {
+    document.getElementById("myDropdown").classList.toggle("show");
+}
 
-// let handleMatchMedia = function(mediaQuery) {
-//     if (mediaQuery.matches) {
-//         $(".content__section4").children().removeClass("col-3");
-//         $(".content__section4").children().addClass("col-6");
-//     } else {
-//         $(".content__section4").children().addClass("col-3");
-//         $(".content__section4").children().removeClass("col-6");
-//     }
-// };
+// Closes menu when user clicks outside of it
+window.onclick = function(event) {
+    if (!event.target.matches('#dropBtn')) {
+        let dropdowns = document.getElementsByClassName("dropdown__content");
 
-// handleMatchMedia(mql);
-
-// mql.addListener(handleMatchMedia);
-// const section4 = document.querySelectorAll(".content__section4");
-// const mediaQuery = window.matchMedia('(min-width: 768px)');
-
-// mediaQuery.addEventListener("change", () => {
-//     if (mediaQuery.matches) {
-//         section4.classList.remove("col-3");
-//         section4.classList.add("col-6");
-//     }
-// });
+        for (let i = 0; i < dropdowns.length; i++) {
+            let openDropdown = dropdowns[i];
+            if (openDropdown.classList.contains('show')) {
+                openDropdown.classList.remove('show');
+            }
+        }
+    }
+}
